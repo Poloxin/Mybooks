@@ -19,11 +19,11 @@ Add a vim-plug section to your `~/.vimrc`
 **NOTE:** open `.vimrc` without `sudo`
 
 
-1.Begin the section with `call plug#begin([PLUGIN_DIR])`
+1. Begin the section with `call plug#begin([PLUGIN_DIR])`
 
-2.List the plugins with `Plug` commands
+1. List the plugins with `Plug` commands
 
-3.`call plug#end()` to update `&runtimepath` and initialize plugin system
+1. `call plug#end()` to update `&runtimepath` and initialize plugin system
 
 
 **Example:**
