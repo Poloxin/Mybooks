@@ -2,7 +2,7 @@
 
 ## Command structure in terminal
 
-command *-command* **arguments**
+command *-key* **arguments**
 
 ## Words Note
 

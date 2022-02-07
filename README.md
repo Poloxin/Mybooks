@@ -4,9 +4,7 @@ It's my note:
 
 ## Linux
 
-- ### Book
-
-	- [Book](https://github.com/Poloxin/Mybooks/blob/main/linux.md)
+-  [Note](https://github.com/Poloxin/Mybooks/blob/main/linux.md)
 
 ## Vim
 
