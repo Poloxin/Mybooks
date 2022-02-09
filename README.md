@@ -27,3 +27,9 @@ My note:
 - ### Manager
 
 	- [vim-plug](https://github.com/Poloxin/Mybooks/blob/main/manager_vim-instant-markdown.md)
+
+## Tmux
+
+- ### Cheat sheet
+
+	- [basic](https://github.com/Poloxin/Mybooks/blob/main/tmux/basic/tmux.md)
