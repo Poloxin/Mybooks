@@ -4,7 +4,7 @@ My note:
 
 ## Linux
 
-- [Ters](https://github.com/Poloxin/Mybooks/blob/main/linux/terms.md)
+- [Terms](https://github.com/Poloxin/Mybooks/blob/main/linux/terms.md)
 
 - ### Command
 
