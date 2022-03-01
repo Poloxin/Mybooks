@@ -16,6 +16,14 @@
 
 - `privilege` - привилегии
 
+- `prompted` - запрос
+
+- `propt` - быстрый
+
 - `primory` - первичный
 
 - `defind` - определяется
+
+- `associated` - связанный
+
+- `consist` - состоять

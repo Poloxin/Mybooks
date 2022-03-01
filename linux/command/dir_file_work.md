@@ -27,3 +27,5 @@
 - `ln` - create hard and symbol link `ln -s file link`
 
 	- `-s` - create symbolic link
+
+- `stat` - print wide info about file
