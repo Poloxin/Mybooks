@@ -81,7 +81,7 @@ Default `all`
 
 - `umask` - `umask 0000` defind permission default that set where file created. Using octal form bit mask for reset permission mode.
 
-|Additionaly value||Letter|Number|Description                                                                           |
+|Additionaly value|Letter|Number|Description                                                                            |
 |-----------------|-------|------|--------------------------------------------------------------------------------------|
 |`setuid`         |s      |4     |Execute with owner of this file privilege                                             |
 |`setgid`         |s      |2     |Execute with group of owner.If on directory file will create with dade dir group owner|
