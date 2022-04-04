@@ -21,7 +21,7 @@ My note:
 ## Projects
 
 - ### Nextcloud
-	- [Install Nextcloud and integration of onlyoffice](https://github.com/Poloxin/Mybooks/blob/main/project/nextcloud/onlyoffice_integration)
+	- [Install Nextcloud and integration of onlyoffice](https://github.com/Poloxin/Mybooks/blob/main/projects/nextcloud/onlyoffice_integration/nextcloud_onlyoffice_integration.md)
 
 ## Vim
 

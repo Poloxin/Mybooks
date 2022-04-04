@@ -34,6 +34,8 @@ sudo fdisk /dev/sdb
 sudo mkfs -t ext4 /dev/sdb1
 ```
 
+- `resize2fs` - file system occupy free space
+
 if u want return lasr fs on disk print:
 
 ```
@@ -58,4 +60,117 @@ sudo dd if=/dev/sdc of=image.img
 
 ```
 blkid /dev/sdc2
+```
+
+- `wipefs -a` - wipe fs on dev
+
+
+## LVM
+
+### Create of LV
+
+- `pvcreate` - create physical volume
+
+```
+pvcreate /dev/sda
+```
+
+	- `pvdisplay` disaplay info about pv
+
+- `vgcreate` - create virtual group 
+
+```
+vgcreate < name >  /dev/sda /dev/sdb
+```
+	`vgdisplay` - display info about virtual group
+
+- `lvcreate` - create logical volume
+
+```
+lvcreate < name of vg >  -n < name of lv >  [-L < size > or -l < sice in percent 80%FREE >]
+```
+
+Mount in `fstab` use *mapper name* `/dev/mapper/name_of_vg-name_of_lv`
+
+```
+ls -l /dev/mapper/name_of_vg-name_of_lv
+```
+
+
+### Extend of LV
+
+1. Create pv new disk
+
+1. Extend virtual group 
+
+```
+sudo vgextend < name > /dev/sdd
+```	
+
+1. Extend logical volume
+
+```
+sudo lvextend < name of group > / < name of logical value > +L < size > [-r Resize file system ]
+```
+
+### Snapshot
+
+*Copy on right*
+
+Create snapshot as logical value
+
+```
+sudo lvcreate -s (snapshot) -n < name of snap> -L <size of snap> < name of origin lv >
+```
+
+### Restore from snapshot
+
+1
+
+### Restore from snapshot
+
+1. Unmount lvm 
+
+2. Convert to snapshot 
+
+```
+sudo lvconvert --merg	< name_of_vgroup >/< name_of_lv >
+```
+
+## RAID
+
+- `md` - Multiple Device driver aka Linux Software RAID
+
+- `mdadm` - manage md
+
+1. Create mirrors partition on disks
+
+2. Create RAID by `mdadm`
+
+```
+sudo mdadm --create < name of RAID > --level=1 --raid-devices=2 /dev/sdb1 /dev/sdc1
+```
+
+3. Save config of our RAID
+
+Become root
+
+Two variant : disks massive or partition massive, command in manual of mdadm 
+
+```
+sudo echo 'DEVICE /dev/hd*[0-9] /dev/sd*[0-9]' > /etc/mdadm.conf
+
+mdadm --detail --scan >> mdadm.conf
+```
+
+```
+echo 'DEVICE /dev/hd[a-z] /dev/sd*[a-z]' > mdadm.conf
+
+mdadm --examine --scan --config=mdadm.conf >> mdadm.conf
+```
+
+4. Replace disk, if crash
+
+```
+sudo mdadm /dev/md127(name of raid)  --add /dev/sdb1
 ```
