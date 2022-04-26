@@ -1,8 +1,8 @@
 # SSL/TLS
 
-Три аспекта безопасности tsl:
+Три аспекта безопасности tls:
 
-- [Приватность](https://github.com/Poloxin/Mybooks/Network/PKI/encrypto.md) (privacy) - шифрование
+- [Приватность](https://github.com/Poloxin/Mybooks/blob/main/Network/PKI/encrypto.md) (privacy) - шифрование
 
 - [Целостность](https://github.com/Poloxin/Mybooks/Network/PKI/integrety.md) (integrety) - хеш-функция
 
