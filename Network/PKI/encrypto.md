@@ -1,4 +1,4 @@
-# Enctyprion
+# Encryption
 
 Два типа шифрования: 
 
