@@ -7,7 +7,8 @@ A minimalist Vim plugin manager.
 You need download plug.vim and put in the `~/.vim/autoload` directory
 
 ```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Configure .vimrc
